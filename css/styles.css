@@ -32,7 +32,7 @@
 
   --wrap: 1180px;
   --radius: 4px;
-  --header-h: 76px;
+  --header-h: 100px;
   color-scheme: dark;
 }
 
@@ -135,7 +135,7 @@ body::before {
 }
 .site-header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; height: var(--header-h); }
 .brand { display: inline-flex; align-items: center; flex: none; }
-.brand img { height: 62px; width: auto; mix-blend-mode: lighten; }
+.brand img { height: 88px; width: auto; mix-blend-mode: lighten; }
 .nav { display: flex; align-items: center; gap: 1.75rem; }
 .nav a:not(.btn) {
   color: var(--silver); text-decoration: none; font-weight: 500; font-size: 0.98rem;
@@ -498,8 +498,8 @@ body::before {
   .quick-facts { width: 100%; }
 }
 @media (max-width: 560px) {
-  :root { --header-h: 68px; }
-  .brand img { height: 54px; }
+  :root { --header-h: 80px; }
+  .brand img { height: 66px; }
   .process { grid-template-columns: minmax(0, 1fr); }
   .cta-row .btn { width: 100%; }
   .ticket .row { grid-template-columns: minmax(0, 1fr); gap: 4px; }
