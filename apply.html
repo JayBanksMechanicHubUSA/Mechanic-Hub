@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Apply as an Automotive Technician | Mechanic Hub</title>
+<meta name="description" content="Master, A-Level and B-Level automotive technicians: send your profile once and get considered for repair shop and dealership roles across the United States. Free to apply.">
+<meta name="theme-color" content="#080808">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Mechanic Hub">
+<meta property="og:title" content="Apply as an Automotive Technician | Mechanic Hub">
+<meta property="og:description" content="Master, A-Level and B-Level automotive technicians: send your profile once and get considered for repair shop and dealership roles across the United States. Free to apply.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icon-32.png">
+<link rel="apple-touch-icon" href="/assets/icon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,500..900&family=Barlow:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/css/styles.css?v=mvmvv1vx">
+
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="Mechanic Hub home">
+      <img src="/assets/logo-240.webp" srcset="/assets/logo-240.webp 240w, /assets/logo-480.webp 480w" sizes="84px" width="240" height="180" alt="Mechanic Hub">
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><span></span></button>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <a href="/#process">How it works</a>
+      <a href="/#pricing">Pricing</a>
+      <a href="/#faq">FAQ</a>
+      <a href="/apply" data-nav="apply" aria-current="page">For technicians</a>
+      <a class="btn btn--gold" href="/hire" data-nav="hire">Hire a Technician</a>
+    </nav>
+  </div>
+</header>
+
+
+<main id="main">
+  <section class="page-hero" aria-labelledby="apply-title">
+    <div class="wrap">
+      <span class="breadcrumb"><a href="/">Home</a> / For technicians</span>
+      <h1 id="apply-title">Your Skills Deserve the Right Shop.</h1>
+      <p class="lede">We connect automotive technicians with repair shops and dealerships looking for their skills. Tell us about your experience and the opportunities you are interested in.</p>
+      <div class="cta-row">
+        <a class="btn btn--gold" href="#application">Start my profile <span class="arrow" aria-hidden="true">↓</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--panel" aria-labelledby="why-title">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="spec">Why send us your profile</span>
+        <h2 id="why-title">Built for working techs, not job-board clutter.</h2>
+      </div>
+      <div class="tech-points">
+        <div><span class="spec spec--gold">Specialists</span><h3>We only recruit technicians</h3><p>We understand flat rate versus hourly, diag work versus line work, and why your toolbox matters.</p></div>
+        <div><span class="spec spec--gold">Fit first</span><h3>Roles matched to your level</h3><p>We match you with shops based on your actual skills, the work you want and the pay you're after.</p></div>
+        <div><span class="spec spec--gold">Your call</span><h3>Nothing shared without a conversation</h3><p>We talk with you about a specific opportunity before introducing you to a shop. Applying is free.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="application" aria-labelledby="application-title">
+    <div class="wrap form-shell">
+      <div class="form-aside">
+        <span class="spec spec--gold">Technician profile</span>
+        <h2 id="application-title">Tell us what you work on.</h2>
+        <p>About five minutes. A résumé helps but isn't required.</p>
+        <ol class="next-list">
+          <li>We review your experience and skills.</li>
+          <li>When a role fits, we reach out to talk it through with you.</li>
+          <li>If you're interested, we introduce you to the shop for an interview.</li>
+        </ol>
+        <p class="hint">We'll never ask for your Social Security number, bank details or driver's license number here. Fields marked <span class="req">*</span> are required.</p>
+      </div>
+
+      <div data-form-wrap>
+        <form class="form" id="tech-form" data-endpoint="/api/technician-application" enctype="multipart/form-data" novalidate>
+          <div class="hp-field" aria-hidden="true">
+            <label for="t-company_fax">Leave this field empty</label>
+            <input type="text" id="t-company_fax" name="company_fax" tabindex="-1" autocomplete="off">
+          </div>
+          <input type="hidden" name="form_started" value="">
+
+          <fieldset>
+            <legend>About you</legend>
+            <div class="grid-2">
+              <div class="field"><label for="t-full_name">Full name<span class="req">*</span></label>
+                <input class="input" id="t-full_name" name="full_name" autocomplete="name" required maxlength="120"><span class="error-msg" id="t-full_name-err"></span></div>
+              <div class="field"><label for="t-email">Email address<span class="req">*</span></label>
+                <input class="input" type="email" id="t-email" name="email" autocomplete="email" required maxlength="200"><span class="error-msg" id="t-email-err"></span></div>
+              <div class="field"><label for="t-phone">Phone number<span class="req">*</span></label>
+                <input class="input" type="tel" id="t-phone" name="phone" autocomplete="tel" required maxlength="30" placeholder="(555) 555-0123" data-validate="phone"><span class="error-msg" id="t-phone-err"></span></div>
+              <div class="field"><label for="t-linkedin">LinkedIn profile<span class="opt">Optional</span></label>
+                <input class="input" type="url" id="t-linkedin" name="linkedin" maxlength="200" placeholder="https://linkedin.com/in/…"><span class="error-msg" id="t-linkedin-err"></span></div>
+              <div class="field"><label for="t-city">Current city<span class="req">*</span></label>
+                <input class="input" id="t-city" name="city" autocomplete="address-level2" required maxlength="100"><span class="error-msg" id="t-city-err"></span></div>
+              <div class="field"><label for="t-state">Current state<span class="req">*</span></label>
+                <select id="t-state" name="state" required><option value="">Select a state…</option><option value="AL">Alabama</option><option value="AK">Alaska</option><option value="AZ">Arizona</option><option value="AR">Arkansas</option><option value="CA">California</option><option value="CO">Colorado</option><option value="CT">Connecticut</option><option value="DE">Delaware</option><option value="DC">District of Columbia</option><option value="FL">Florida</option><option value="GA">Georgia</option><option value="HI">Hawaii</option><option value="ID">Idaho</option><option value="IL">Illinois</option><option value="IN">Indiana</option><option value="IA">Iowa</option><option value="KS">Kansas</option><option value="KY">Kentucky</option><option value="LA">Louisiana</option><option value="ME">Maine</option><option value="MD">Maryland</option><option value="MA">Massachusetts</option><option value="MI">Michigan</option><option value="MN">Minnesota</option><option value="MS">Mississippi</option><option value="MO">Missouri</option><option value="MT">Montana</option><option value="NE">Nebraska</option><option value="NV">Nevada</option><option value="NH">New Hampshire</option><option value="NJ">New Jersey</option><option value="NM">New Mexico</option><option value="NY">New York</option><option value="NC">North Carolina</option><option value="ND">North Dakota</option><option value="OH">Ohio</option><option value="OK">Oklahoma</option><option value="OR">Oregon</option><option value="PA">Pennsylvania</option><option value="PR">Puerto Rico</option><option value="RI">Rhode Island</option><option value="SC">South Carolina</option><option value="SD">South Dakota</option><option value="TN">Tennessee</option><option value="TX">Texas</option><option value="UT">Utah</option><option value="VT">Vermont</option><option value="VA">Virginia</option><option value="WA">Washington</option><option value="WV">West Virginia</option><option value="WI">Wisconsin</option><option value="WY">Wyoming</option></select><span class="error-msg" id="t-state-err"></span></div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Experience</legend>
+            <div class="grid-2">
+              <div class="field"><label for="t-years_experience">Years of automotive experience<span class="req">*</span></label>
+                <input class="input" type="number" inputmode="numeric" id="t-years_experience" name="years_experience" min="0" max="60" required><span class="error-msg" id="t-years_experience-err"></span></div>
+              <div class="field"><label for="t-employment_status">Current employment status<span class="req">*</span></label>
+                <select id="t-employment_status" name="employment_status" required>
+                  <option value="">Select…</option>
+                  <option>Employed full-time</option>
+                  <option>Employed part-time</option>
+                  <option>Self-employed / mobile tech</option>
+                  <option>Not currently employed</option>
+                  <option>Other</option>
+                </select><span class="error-msg" id="t-employment_status-err"></span></div>
+            </div>
+            <div class="field">
+              <span class="label" id="t-tech_level-label">Technician level<span class="req">*</span></span>
+              <div class="choices" role="radiogroup" aria-labelledby="t-tech_level-label" aria-required="true" data-group="tech_level">
+                <label class="chip"><input type="radio" name="tech_level" value="Master" required><span>Master</span></label>
+                <label class="chip"><input type="radio" name="tech_level" value="A-Level"><span>A-Level</span></label>
+                <label class="chip"><input type="radio" name="tech_level" value="B-Level"><span>B-Level</span></label>
+                <label class="chip"><input type="radio" name="tech_level" value="Other"><span>Other / not sure</span></label>
+              </div>
+              <span class="error-msg" id="t-tech_level-err"></span>
+            </div>
+            <div class="field">
+              <span class="label" id="t-expertise-label">Primary areas of technical expertise<span class="req">*</span></span>
+              <span class="hint">Select all that apply.</span>
+              <div class="choices" role="group" aria-labelledby="t-expertise-label" data-group="expertise" data-min="1">
+                <label class="chip"><input type="checkbox" name="expertise" value="Engine diagnostics & repair"><span>Engine diag &amp; repair</span></label>
+                <label class="chip"><input type="checkbox" name="expertise" value="Electrical & electronics"><span>Electrical &amp; electronics</span></label>
+                <label class="chip"><input type="checkbox" name="expertise" value="Drivability"><span>Drivability</span></label>
+                <label class="chip"><input type="checkbox" name="expertise" value="Transmission & drivetrain"><span>Transmission &amp; drivetrain</span></label>
+                <label class="chip"><input type="checkbox" name="expertise" value="Brakes, steering & suspension"><span>Brakes, steering &amp; suspension</span></label>
+                <label class="chip"><input type="checkbox" name="expertise" value="HVAC"><span>HVAC</span></label>
+                <label class="chip"><input type="checkbox" name="expertise" value="Hybrid & EV"><span>Hybrid &amp; EV</span></label>
+                <label class="chip"><input type="checkbox" name="expertise" value="Diesel"><span>Diesel</span></label>
+                <label class="chip"><input type="checkbox" name="expertise" value="ADAS calibration"><span>ADAS calibration</span></label>
+                <label class="chip"><input type="checkbox" name="expertise" value="Maintenance & light repair"><span>Maintenance &amp; light repair</span></label>
+                <label class="chip"><input type="checkbox" name="expertise" value="Other"><span>Other</span></label>
+              </div>
+              <span class="error-msg" id="t-expertise-err"></span>
+            </div>
+            <div class="field"><label for="t-experience_summary">Brief description of your automotive experience<span class="req">*</span></label>
+              <textarea id="t-experience_summary" name="experience_summary" required maxlength="3000" aria-describedby="t-experience_summary-hint" placeholder="Shops you've worked at, the kind of work you handle, what you're best at…"></textarea>
+              <span class="hint" id="t-experience_summary-hint">At least 20 characters.</span>
+              <span class="error-msg" id="t-experience_summary-err"></span></div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Skills, tools &amp; certifications <span class="opt">Optional</span></legend>
+            <div class="grid-2">
+              <div class="field"><label for="t-certifications">ASE or other certifications</label>
+                <input class="input" id="t-certifications" name="certifications" maxlength="300" placeholder="e.g. ASE A1–A8, L1, OEM training"></div>
+              <div class="field"><label for="t-makes_models">Makes and models you've worked on</label>
+                <input class="input" id="t-makes_models" name="makes_models" maxlength="300" placeholder="e.g. GM, Ford, Toyota, European"></div>
+              <div class="field"><label for="t-diagnostic_equipment">Diagnostic equipment experience</label>
+                <input class="input" id="t-diagnostic_equipment" name="diagnostic_equipment" maxlength="300" placeholder="e.g. Snap-on, Autel, OEM scan tools, scopes"></div>
+              <div class="field"><label for="t-tool_value">Approximate value of tools you own</label>
+                <select id="t-tool_value" name="tool_value">
+                  <option value="">Select…</option>
+                  <option>Under $5,000</option>
+                  <option>$5,000–$15,000</option>
+                  <option>$15,000–$30,000</option>
+                  <option>$30,000–$50,000</option>
+                  <option>Over $50,000</option>
+                </select></div>
+            </div>
+            <div class="field">
+              <span class="label" id="t-bumper_to_bumper-label">Bumper-to-bumper repair capability?</span>
+              <div class="choices" role="radiogroup" aria-labelledby="t-bumper_to_bumper-label">
+                <label class="chip"><input type="radio" name="bumper_to_bumper" value="Yes"><span>Yes</span></label>
+                <label class="chip"><input type="radio" name="bumper_to_bumper" value="Partially"><span>Partially</span></label>
+                <label class="chip"><input type="radio" name="bumper_to_bumper" value="No"><span>No</span></label>
+              </div>
+            </div>
+            <div class="field">
+              <label for="t-resume">Résumé</label>
+              <div class="file-drop">
+                <input type="file" id="t-resume" name="resume" accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" aria-describedby="t-resume-hint">
+                <span class="hint" id="t-resume-hint">PDF, DOC or DOCX, up to 5 MB.</span>
+              </div>
+              <span class="error-msg" id="t-resume-err"></span>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>What you're looking for <span class="opt">Optional</span></legend>
+            <div class="grid-2">
+              <div class="field"><label for="t-preferred_locations">Preferred job location(s)</label>
+                <input class="input" id="t-preferred_locations" name="preferred_locations" maxlength="300" placeholder="City, state or region"></div>
+              <div class="field"><label for="t-min_compensation">Minimum desired compensation</label>
+                <input class="input" id="t-min_compensation" name="min_compensation" maxlength="120" placeholder="e.g. $40/hr flat rate or $90k/yr"></div>
+              <div class="field">
+                <span class="label" id="t-willing_relocate-label">Willing to relocate within the U.S.?</span>
+                <div class="choices" role="radiogroup" aria-labelledby="t-willing_relocate-label">
+                  <label class="chip"><input type="radio" name="willing_relocate" value="Yes"><span>Yes</span></label>
+                  <label class="chip"><input type="radio" name="willing_relocate" value="Maybe"><span>Maybe</span></label>
+                  <label class="chip"><input type="radio" name="willing_relocate" value="No"><span>No</span></label>
+                </div>
+              </div>
+              <div class="field"><label for="t-start_date">Earliest available start date</label>
+                <input class="input" type="date" id="t-start_date" name="start_date"><span class="error-msg" id="t-start_date-err"></span></div>
+            </div>
+            <div class="field"><label for="t-relocation_notes">Relocation preferences or restrictions</label>
+              <textarea id="t-relocation_notes" name="relocation_notes" maxlength="1500" placeholder="Family, housing, states you would or wouldn't consider…"></textarea></div>
+            <div class="field"><label for="t-additional_info">Additional information</label>
+              <textarea id="t-additional_info" name="additional_info" maxlength="3000"></textarea></div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Consent</legend>
+            <label class="consent" for="t-consent_privacy">
+              <input type="checkbox" id="t-consent_privacy" name="consent_privacy" value="yes" required>
+              <span>I agree that Mechanic Hub may store and process my information to consider me for automotive technician roles, as described in the <a href="/privacy">Privacy Policy</a>, and may contact me by email and phone about opportunities. I understand my profile won't be shared with an employer without first discussing the specific opportunity with me.<span class="req">*</span></span>
+            </label>
+            <span class="error-msg" id="t-consent_privacy-err"></span>
+            <label class="consent" for="t-consent_sms">
+              <input type="checkbox" id="t-consent_sms" name="consent_sms" value="yes">
+              <span><strong>Optional:</strong> I agree to receive calls and text messages from Mechanic Hub about job opportunities at the number above, including calls and texts made using automated technology or an artificial or prerecorded voice. Consent is not a condition of applying. Message and data rates may apply. Reply STOP to opt out.</span>
+            </label>
+          </fieldset>
+
+          <div class="form-status" role="alert" aria-live="assertive" hidden></div>
+          <button class="btn btn--gold btn--block" type="submit">Submit My Technician Profile <span class="arrow" aria-hidden="true">→</span></button>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="/assets/logo-480.webp" width="480" height="360" alt="Mechanic Hub" loading="lazy">
+        <p>Specialist recruitment for automotive repair shops and dealerships across the United States. We recruit automotive technicians only.</p>
+      </div>
+      <div class="footer-col">
+        <h2>For shops</h2>
+        <ul>
+          <li><a href="/hire">Hire a Technician</a></li>
+          <li><a href="/#process">How it works</a></li>
+          <li><a href="/#pricing">Pricing</a></li>
+          <li><a href="/#guarantee">30-day replacement guarantee</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2>For technicians</h2>
+        <ul>
+          <li><a href="/apply">Apply as a Technician</a></li>
+          <li><a href="/#levels">Technician levels</a></li>
+          <li><a href="/privacy">Privacy Policy</a></li>
+          <li><a href="/terms">Terms of Service</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2>Contact</h2>
+        <ul>
+          <li>Email: <span class="placeholder">[CONTACT EMAIL]</span></li>
+          <li>Phone: <span class="placeholder">[US PHONE NUMBER]</span></li>
+          <li>Office: <span class="placeholder">[BUSINESS ADDRESS]</span>, South Africa</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span data-year>2026</span> <span class="placeholder">[COMPANY LEGAL NAME]</span> trading as Mechanic Hub. Reg. no. <span class="placeholder">[REGISTRATION NUMBER]</span></span>
+      <span><a href="/privacy">Privacy</a> &nbsp;·&nbsp; <a href="/terms">Terms</a></span>
+    </div>
+  </div>
+</footer>
+<script src="/js/rules.js?v=mvmvv1vx" defer></script>
+<script src="/js/main.js?v=mvmvv1vx" defer></script>
+
+</body>
+</html>
