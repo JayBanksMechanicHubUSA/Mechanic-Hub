@@ -318,10 +318,10 @@ body::before {
 
 /* ---------- Guarantee ---------- */
 .guarantee { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: clamp(24px, 4vw, 56px); align-items: start; border: 1px solid var(--rule-strong); border-radius: var(--radius); padding: clamp(24px, 4vw, 48px); background: linear-gradient(135deg, var(--steel-2), var(--ink)); }
-.seal { width: clamp(110px, 14vw, 150px); aspect-ratio: 1; max-width: 100%; border-radius: 50%; border: 2px solid var(--gold); display: grid; place-items: center; text-align: center; position: relative; }
+.seal { width: clamp(130px, 14vw, 150px); aspect-ratio: 1; max-width: 100%; border-radius: 50%; border: 2px solid var(--gold); display: grid; place-items: center; text-align: center; position: relative; }
 .seal::after { content: ""; position: absolute; inset: 7px; border-radius: 50%; border: 1px dashed rgba(245,180,0,0.5); }
 .seal b { font-family: var(--font-display); font-stretch: 125%; font-weight: 900; font-size: clamp(2.4rem, 1.6rem + 2vw, 3.2rem); line-height: 0.9; color: var(--gold); display: block; }
-.seal span { font-family: var(--font-mono); font-size: 0.65rem; letter-spacing: 0.14em; color: var(--silver); text-transform: uppercase; }
+.seal span { font-family: var(--font-mono); font-size: 0.65rem; letter-spacing: 0.06em; color: var(--silver); text-transform: uppercase; }
 .guarantee-body { display: grid; gap: 1rem; min-width: 0; }
 .guarantee-body h2 { font-size: var(--step-2); }
 .guarantee-body p { color: var(--silver); }
