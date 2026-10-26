@@ -23,6 +23,12 @@
       if (e.key === 'Escape' && nav.classList.contains('is-open')) { closeNav(); toggle.focus(); }
     });
   }
+  var header = document.querySelector('.site-header');
+  if (header) {
+    var onScroll = function () { header.classList.toggle('is-scrolled', window.scrollY > 40); };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
   var yr = document.querySelectorAll('[data-year]');
   for (var y = 0; y < yr.length; y++) yr[y].textContent = new Date().getFullYear();
 
