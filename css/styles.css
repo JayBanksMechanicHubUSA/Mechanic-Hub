@@ -32,7 +32,7 @@
 
   --wrap: 1180px;
   --radius: 4px;
-  --header-h: 100px;
+  --header-h: 76px;
   color-scheme: dark;
 }
 
@@ -135,7 +135,7 @@ body::before {
 }
 .site-header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; height: var(--header-h); }
 .brand { display: inline-flex; align-items: center; flex: none; }
-.brand img { height: 88px; width: auto; mix-blend-mode: lighten; }
+.brand img { height: 62px; width: auto; mix-blend-mode: lighten; }
 .nav { display: flex; align-items: center; gap: 1.75rem; }
 .nav a:not(.btn) {
   color: var(--silver); text-decoration: none; font-weight: 500; font-size: 0.98rem;
@@ -318,10 +318,11 @@ body::before {
 
 /* ---------- Guarantee ---------- */
 .guarantee { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: clamp(24px, 4vw, 56px); align-items: start; border: 1px solid var(--rule-strong); border-radius: var(--radius); padding: clamp(24px, 4vw, 48px); background: linear-gradient(135deg, var(--steel-2), var(--ink)); }
-.seal { width: clamp(130px, 14vw, 150px); aspect-ratio: 1; max-width: 100%; border-radius: 50%; border: 2px solid var(--gold); display: grid; place-items: center; text-align: center; position: relative; }
+.seal { width: clamp(110px, 14vw, 150px); aspect-ratio: 1; max-width: 100%; border-radius: 50%; border: 2px solid var(--gold); display: grid; place-items: center; text-align: center; position: relative; }
 .seal::after { content: ""; position: absolute; inset: 7px; border-radius: 50%; border: 1px dashed rgba(245,180,0,0.5); }
 .seal b { font-family: var(--font-display); font-stretch: 125%; font-weight: 900; font-size: clamp(2.4rem, 1.6rem + 2vw, 3.2rem); line-height: 0.9; color: var(--gold); display: block; }
-.seal span { font-family: var(--font-mono); font-size: 0.65rem; letter-spacing: 0.06em; color: var(--silver); text-transform: uppercase; }
+.seal { min-width: 132px; }
+.seal span { font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.08em; line-height: 1.5; color: var(--silver); text-transform: uppercase; display: block; padding-inline: 14px; }
 .guarantee-body { display: grid; gap: 1rem; min-width: 0; }
 .guarantee-body h2 { font-size: var(--step-2); }
 .guarantee-body p { color: var(--silver); }
@@ -444,7 +445,8 @@ body::before {
 .site-footer { border-top: 1px solid var(--rule-strong); background: #050505; padding-block: 56px 32px; }
 .footer-grid { display: grid; grid-template-columns: minmax(0, 1.3fr) repeat(3, minmax(0, 1fr)); gap: 32px; }
 .footer-brand { display: grid; gap: 16px; align-content: start; }
-.footer-brand img { width: 170px; mix-blend-mode: lighten; }
+/* Logo fills its footer column at every screen size, capped so it stays crisp */
+.footer-brand img { width: 100%; max-width: 320px; height: auto; margin-left: -10px; mix-blend-mode: lighten; }
 .footer-brand p { color: var(--muted); font-size: 0.93rem; max-width: 36ch; }
 .footer-col h2 { font-family: var(--font-mono); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; }
 .footer-col ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; font-size: 0.95rem; }
@@ -498,8 +500,8 @@ body::before {
   .quick-facts { width: 100%; }
 }
 @media (max-width: 560px) {
-  :root { --header-h: 80px; }
-  .brand img { height: 66px; }
+  :root { --header-h: 68px; }
+  .brand img { height: 54px; }
   .process { grid-template-columns: minmax(0, 1fr); }
   .cta-row .btn { width: 100%; }
   .ticket .row { grid-template-columns: minmax(0, 1fr); gap: 4px; }

@@ -1,0 +1,93 @@
+/* ==========================================================================
+   Mechanic Hub — "Racing Stripe" theme (loaded after styles.css)
+   White body, near-black header and footer, cobalt blue for actions and
+   accents, thin double racing stripes as the recurring detail.
+   ========================================================================== */
+:root {
+  --ink: #ffffff;
+  --steel: #f3f4f6;
+  --steel-2: #eaecf0;
+  --rule: #e1e4e9;
+  --rule-strong: #c8cdd6;
+  --text: #0e1116;
+  --muted: #5a6170;
+  --silver: #2b3140;
+  --gold: #1d4ed8;            /* accent (cobalt); name kept from the base stylesheet */
+  --gold-wash: rgba(29, 78, 216, 0.07);
+  --danger: #c4231b;
+  --check: #1d4ed8;
+  --btn-fill: #1d4ed8;
+  --btn-fill-hover: #2a5cf0;
+  --btn-ink: #ffffff;
+  --header-bg: #0e1116;
+  --footer-bg: #0e1116;
+  --input-hover: #9aa3b2;
+  --focus-ring: rgba(29, 78, 216, 0.2);
+  --racing: linear-gradient(180deg, #1d4ed8 0 2px, transparent 2px 4px, #1d4ed8 4px 6px);
+  --header-h: 88px;
+  --logo-h: 60px;
+  color-scheme: light;
+}
+/* Header and footer stay dark so the logo sits on black */
+.site-header, .site-footer {
+  --ink: #0e1116; --steel: #161a21; --steel-2: #1d222b; --rule: #2a303b; --rule-strong: #3b4350;
+  --text: #f3f5f8; --muted: #a2a9b6; --silver: #d3d8e0; --gold: #7ea6ff;
+  color-scheme: dark;
+  color: var(--text);
+}
+
+body { background: var(--ink); color: var(--text); }
+a:hover { color: var(--text); }
+::selection { background: var(--btn-fill); color: var(--btn-ink); }
+.skip-link { background: var(--btn-fill); color: var(--btn-ink); }
+
+/* ---------- Header with horizontal logo, shrinks on scroll ---------- */
+body::before { background: var(--header-bg); }
+.site-header { background: var(--header-bg); }
+.site-header .wrap { height: var(--header-h); transition: height 200ms ease; }
+.brand img { height: var(--logo-h); width: auto; transition: height 200ms ease; }
+.site-header.is-scrolled { --header-h: 68px; --logo-h: 44px; }
+@media (max-width: 560px) {
+  :root { --header-h: 68px; --logo-h: 38px; }
+  .site-header.is-scrolled { --header-h: 58px; --logo-h: 32px; }
+}
+
+/* ---------- Buttons ---------- */
+.btn--gold { --btn-bg: var(--btn-fill); --btn-fg: var(--btn-ink); --btn-bd: var(--btn-fill); }
+.btn--gold:hover { --btn-bg: var(--btn-fill-hover); border-color: var(--btn-fill-hover); color: var(--btn-ink); }
+.spinner { border-color: rgba(255, 255, 255, 0.35); border-top-color: #fff; }
+
+/* ---------- Racing-stripe details ---------- */
+.section-head .spec::before { height: 8px; background: linear-gradient(90deg, #1d4ed8 0 42%, transparent 42% 58%, #1d4ed8 58%); }
+.site-footer { background: var(--footer-bg); position: relative; }
+.site-footer::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 6px; background: var(--racing); pointer-events: none; }
+.ticket { background: var(--steel); }
+.ticket::before { height: 6px; background: linear-gradient(90deg, transparent 0 40%, #1d4ed8 40% 47%, transparent 47% 53%, #1d4ed8 53% 60%, transparent 60%); }
+
+/* ---------- Hero: centered logo showcase ---------- */
+.hero { background-image: none; background: radial-gradient(ellipse 60% 70% at 85% 30%, rgba(29,78,216,0.06), transparent 70%), var(--ink); }
+.hero::before { display: none; }
+.hero .wrap.showcase {
+  grid-template-columns: minmax(0, 1fr); justify-items: center; text-align: center; gap: 1.4rem;
+  padding-block: clamp(40px, 6vw, 72px) clamp(56px, 7vw, 96px);
+}
+.showcase-logo {
+  width: clamp(220px, 30vw, 380px); height: auto; box-sizing: content-box; max-width: calc(100% - 52px);
+  background: #000; padding: 18px 26px; border-radius: 14px;
+}
+.hero.hero--showcase h1 { max-width: 22ch; margin-inline: auto; }
+.hero--showcase .lede { margin-inline: auto; }
+.hero--showcase .cta-row { justify-content: center; }
+.page-hero { background: radial-gradient(ellipse 70% 90% at 90% 0%, rgba(29,78,216,0.06), transparent 70%), var(--ink); }
+
+/* ---------- Components ---------- */
+.checklist--solution li::before, .includes li::before, .level li::before { color: var(--check); }
+.level-badge { color: var(--ink); }
+.level--master .level-badge { background: var(--btn-fill); color: #fff; }
+.process .num::before { background: var(--btn-fill); color: #fff; }
+.gauge-bar i { background: linear-gradient(90deg, #1d4ed8 0%, rgba(29, 78, 216, 0.3) 100%); }
+.seal::after { border-color: var(--gold); opacity: 0.5; }
+.input:hover, .form select:hover, .form textarea:hover, .chip:hover span { border-color: var(--input-hover); }
+.input:focus, .form select:focus, .form textarea:focus { box-shadow: 0 0 0 3px var(--focus-ring); }
+.form-success .tick { background: var(--btn-fill); color: #fff; }
+.placeholder, .legal-note { border-color: rgba(29, 78, 216, 0.5); }
