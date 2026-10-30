@@ -28,54 +28,27 @@
 
   var FORMS = {
     client: {
-      full_name: { label: 'Full name', type: 'text', required: true, max: 120 },
-      business_name: { label: 'Business / shop name', type: 'text', required: true, max: 160 },
-      work_email: { label: 'Work email', type: 'email', required: true, max: 200 },
-      phone: { label: 'Phone number', type: 'phone', required: true, max: 30 },
-      shop_city: { label: 'Shop city', type: 'text', required: true, max: 100 },
-      shop_state: { label: 'Shop state', type: 'enum', required: true, options: STATE_CODES },
-      locations_count: { label: 'Number of locations', type: 'int', required: true, min: 1, max: 999 },
-      tech_level: { label: 'Technician level', type: 'enum', required: true, options: ['Master', 'A-Level', 'B-Level', 'Multiple levels'] },
-      techs_needed: { label: 'Number of technicians', type: 'int', required: true, min: 1, max: 99 },
-      position_description: { label: 'Position description', type: 'text', required: true, minLen: 20, max: 3000 },
-      pay_range: { label: 'Pay range', type: 'text', required: true, max: 120 },
-      website: { label: 'Business website', type: 'url', max: 200 },
-      shop_type: { label: 'Shop type', type: 'enum', options: ['Independent repair shop', 'Dealership', 'Fleet maintenance', 'Other'] },
-      hiring_timeline: { label: 'Hiring timeline', type: 'enum', options: ['As soon as possible', 'Within 30 days', 'Within 60 days', 'Within 90 days', 'Just exploring'] },
-      open_nationwide: { label: 'Open to nationwide recruitment', type: 'enum', options: YNM },
-      open_relocation: { label: 'Open to relocation candidates', type: 'enum', options: YNM },
-      additional_info: { label: 'Additional information', type: 'text', max: 3000 },
-      consent_authorized: { label: 'Authorization and Privacy Policy', type: 'bool', required: true },
-      consent_sms: { label: 'Automated calls/texts consent', type: 'bool' }
-    },
-    technician: {
-      full_name: { label: 'Full name', type: 'text', required: true, max: 120 },
+      first_name: { label: 'First name', type: 'text', required: true, max: 60 },
+      last_name: { label: 'Last name', type: 'text', required: true, max: 60 },
+      shop_name: { label: 'Shop name', type: 'text', required: true, max: 160 },
       email: { label: 'Email address', type: 'email', required: true, max: 200 },
       phone: { label: 'Phone number', type: 'phone', required: true, max: 30 },
-      city: { label: 'Current city', type: 'text', required: true, max: 100 },
-      state: { label: 'Current state', type: 'enum', required: true, options: STATE_CODES },
-      years_experience: { label: 'Years of experience', type: 'int', required: true, min: 0, max: 60 },
+      city: { label: 'City', type: 'text', required: true, max: 100 },
+      state: { label: 'State', type: 'enum', required: true, options: STATE_CODES },
+      consent_authorized: { label: 'Contact consent', type: 'bool', required: true }
+    },
+    technician: {
+      first_name: { label: 'First name', type: 'text', required: true, max: 60 },
+      last_name: { label: 'Last name', type: 'text', required: true, max: 60 },
+      email: { label: 'Email address', type: 'email', required: true, max: 200 },
+      phone: { label: 'Phone number', type: 'phone', required: true, max: 30 },
+      city: { label: 'City', type: 'text', required: true, max: 100 },
+      state: { label: 'State', type: 'enum', required: true, options: STATE_CODES },
       tech_level: { label: 'Technician level', type: 'enum', required: true, options: ['Master', 'A-Level', 'B-Level', 'Other'] },
-      employment_status: { label: 'Employment status', type: 'enum', required: true, options: ['Employed full-time', 'Employed part-time', 'Self-employed / mobile tech', 'Not currently employed', 'Other'] },
-      expertise: {
-        label: 'Areas of expertise', type: 'multi', required: true, min: 1,
-        options: ['Engine diagnostics & repair', 'Electrical & electronics', 'Drivability', 'Transmission & drivetrain', 'Brakes, steering & suspension', 'HVAC', 'Hybrid & EV', 'Diesel', 'ADAS calibration', 'Maintenance & light repair', 'Other']
-      },
-      experience_summary: { label: 'Experience description', type: 'text', required: true, minLen: 20, max: 3000 },
-      linkedin: { label: 'LinkedIn profile', type: 'url', max: 200 },
-      certifications: { label: 'Certifications', type: 'text', max: 300 },
-      makes_models: { label: 'Makes and models', type: 'text', max: 300 },
-      diagnostic_equipment: { label: 'Diagnostic equipment', type: 'text', max: 300 },
-      tool_value: { label: 'Tool value', type: 'enum', options: ['Under $5,000', '$5,000–$15,000', '$15,000–$30,000', '$30,000–$50,000', 'Over $50,000'] },
-      bumper_to_bumper: { label: 'Bumper-to-bumper capability', type: 'enum', options: ['Yes', 'No', 'Partially'] },
-      preferred_locations: { label: 'Preferred locations', type: 'text', max: 300 },
-      min_compensation: { label: 'Minimum compensation', type: 'text', max: 120 },
-      willing_relocate: { label: 'Willing to relocate', type: 'enum', options: YNM },
-      relocation_notes: { label: 'Relocation notes', type: 'text', max: 1500 },
-      start_date: { label: 'Earliest start date', type: 'date' },
-      additional_info: { label: 'Additional information', type: 'text', max: 3000 },
-      consent_privacy: { label: 'Privacy consent', type: 'bool', required: true },
-      consent_sms: { label: 'Automated calls/texts consent', type: 'bool' }
+      years_experience: { label: 'Years of experience', type: 'int', required: true, min: 0, max: 60 },
+      tool_value: { label: 'Total invested in tools', type: 'enum', required: true, options: ['Under $5,000', '$5,000–$15,000', '$15,000–$30,000', '$30,000–$50,000', 'Over $50,000'] },
+      certifications: { label: 'Active certifications', type: 'text', max: 300 },
+      consent_privacy: { label: 'Contact consent', type: 'bool', required: true }
     }
   };
 
@@ -86,11 +59,11 @@
 
   // Strings stored with each submission so you can show exactly what someone agreed to.
   var CONSENT_TEXT = {
-    client_authorized: 'I am authorized to submit this inquiry on behalf of the business named above, and I agree to the Privacy Policy. Mechanic Hub may contact me by email and phone about this inquiry.',
-    client_sms: 'I agree to receive calls and text messages from Mechanic Hub about this inquiry at the number above, including calls and texts made using automated technology or an artificial or prerecorded voice. Consent is not a condition of service. Message and data rates may apply. Reply STOP to opt out.',
-    tech_privacy: 'I agree that Mechanic Hub may store and process my information to consider me for automotive technician roles, as described in the Privacy Policy, and may contact me by email and phone about opportunities. I understand my profile won\'t be shared with an employer without first discussing the specific opportunity with me.',
-    tech_sms: 'I agree to receive calls and text messages from Mechanic Hub about job opportunities at the number above, including calls and texts made using automated technology or an artificial or prerecorded voice. Consent is not a condition of applying. Message and data rates may apply. Reply STOP to opt out.',
-    version: '2026-10-24'
+    client_authorized: 'I agree to the Privacy Policy and to be contacted by Mechanic Hub by phone, text (including automated or AI calls and texts) and email. Not a condition of purchase. Msg & data rates may apply. Reply STOP to opt out.',
+    client_sms: 'I agree to the Privacy Policy and to be contacted by Mechanic Hub by phone, text (including automated or AI calls and texts) and email. Not a condition of purchase. Msg & data rates may apply. Reply STOP to opt out.',
+    tech_privacy: 'I agree to the Privacy Policy and to be contacted by Mechanic Hub about job opportunities by phone, text (including automated or AI calls and texts) and email. Not a condition of applying. Msg & data rates may apply. Reply STOP to opt out.',
+    tech_sms: 'I agree to the Privacy Policy and to be contacted by Mechanic Hub about job opportunities by phone, text (including automated or AI calls and texts) and email. Not a condition of applying. Msg & data rates may apply. Reply STOP to opt out.',
+    version: '2026-10-30'
   };
 
   var EMAIL_RE = /^[^\s@<>()[\]\\,;:"]+@[^\s@<>()[\]\\,;:"]+\.[A-Za-z]{2,}$/;

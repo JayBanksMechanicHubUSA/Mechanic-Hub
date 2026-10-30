@@ -19,8 +19,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,500..900&family=Barlow:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="/css/styles.css?v=mvuljm2y">
-<link rel="stylesheet" href="/css/theme.css?v=mvuljm2y">
+<link rel="stylesheet" href="/css/styles.css?v=mvurkg79">
+<link rel="stylesheet" href="/css/theme.css?v=mvurkg79">
 
 </head>
 <body>
@@ -251,11 +251,11 @@
     <div class="wrap form-shell">
       <div class="form-aside">
         <span class="spec spec--gold">Hiring inquiry</span>
-        <h2 id="inquiry-title">Tell us about the role.</h2>
-        <p>Takes about three minutes. There's no charge and no commitment to send an inquiry.</p>
+        <h2 id="inquiry-title">Let's talk about your open role.</h2>
+        <p>Leave your details and we'll be in touch. Takes under a minute, with no charge and no commitment.</p>
         <ol class="next-list">
-          <li>We review your inquiry and the role details.</li>
-          <li>We contact you to talk through the search, timeline and ad budget.</li>
+          <li>We contact you to learn about your shop and the role you need filled.</li>
+          <li>We talk through the search, timeline and ad budget.</li>
           <li>If it's a fit, you receive a written service agreement. The $8,000 fee is paid before the search starts.</li>
         </ol>
         <p class="hint">Fields marked <span class="req">*</span> are required.</p>
@@ -270,104 +270,38 @@
           <input type="hidden" name="form_started" value="">
 
           <fieldset>
-            <legend>You and your shop</legend>
+            <legend>Your details</legend>
             <div class="grid-2">
-              <div class="field"><label for="c-full_name">Full name<span class="req">*</span></label>
-                <input class="input" id="c-full_name" name="full_name" autocomplete="name" required maxlength="120"><span class="error-msg" id="c-full_name-err"></span></div>
-              <div class="field"><label for="c-business_name">Business / shop name<span class="req">*</span></label>
-                <input class="input" id="c-business_name" name="business_name" autocomplete="organization" required maxlength="160"><span class="error-msg" id="c-business_name-err"></span></div>
-              <div class="field"><label for="c-work_email">Work email<span class="req">*</span></label>
-                <input class="input" type="email" id="c-work_email" name="work_email" autocomplete="email" required maxlength="200"><span class="error-msg" id="c-work_email-err"></span></div>
+              <div class="field"><label for="c-first_name">First name<span class="req">*</span></label>
+                <input class="input" id="c-first_name" name="first_name" autocomplete="given-name" required maxlength="60"><span class="error-msg" id="c-first_name-err"></span></div>
+              <div class="field"><label for="c-last_name">Last name<span class="req">*</span></label>
+                <input class="input" id="c-last_name" name="last_name" autocomplete="family-name" required maxlength="60"><span class="error-msg" id="c-last_name-err"></span></div>
+            </div>
+            <div class="field"><label for="c-shop_name">Shop name<span class="req">*</span></label>
+              <input class="input" id="c-shop_name" name="shop_name" autocomplete="organization" required maxlength="160"><span class="error-msg" id="c-shop_name-err"></span></div>
+            <div class="grid-2">
+              <div class="field"><label for="c-email">Email address<span class="req">*</span></label>
+                <input class="input" type="email" id="c-email" name="email" autocomplete="email" required maxlength="200"><span class="error-msg" id="c-email-err"></span></div>
               <div class="field"><label for="c-phone">Phone number<span class="req">*</span></label>
                 <input class="input" type="tel" id="c-phone" name="phone" autocomplete="tel" required maxlength="30" placeholder="(555) 555-0123" data-validate="phone"><span class="error-msg" id="c-phone-err"></span></div>
-              <div class="field"><label for="c-shop_city">Shop city<span class="req">*</span></label>
-                <input class="input" id="c-shop_city" name="shop_city" autocomplete="address-level2" required maxlength="100"><span class="error-msg" id="c-shop_city-err"></span></div>
-              <div class="field"><label for="c-shop_state">Shop state<span class="req">*</span></label>
-                <select id="c-shop_state" name="shop_state" required><option value="">Select a state…</option><option value="AL">Alabama</option><option value="AK">Alaska</option><option value="AZ">Arizona</option><option value="AR">Arkansas</option><option value="CA">California</option><option value="CO">Colorado</option><option value="CT">Connecticut</option><option value="DE">Delaware</option><option value="DC">District of Columbia</option><option value="FL">Florida</option><option value="GA">Georgia</option><option value="HI">Hawaii</option><option value="ID">Idaho</option><option value="IL">Illinois</option><option value="IN">Indiana</option><option value="IA">Iowa</option><option value="KS">Kansas</option><option value="KY">Kentucky</option><option value="LA">Louisiana</option><option value="ME">Maine</option><option value="MD">Maryland</option><option value="MA">Massachusetts</option><option value="MI">Michigan</option><option value="MN">Minnesota</option><option value="MS">Mississippi</option><option value="MO">Missouri</option><option value="MT">Montana</option><option value="NE">Nebraska</option><option value="NV">Nevada</option><option value="NH">New Hampshire</option><option value="NJ">New Jersey</option><option value="NM">New Mexico</option><option value="NY">New York</option><option value="NC">North Carolina</option><option value="ND">North Dakota</option><option value="OH">Ohio</option><option value="OK">Oklahoma</option><option value="OR">Oregon</option><option value="PA">Pennsylvania</option><option value="PR">Puerto Rico</option><option value="RI">Rhode Island</option><option value="SC">South Carolina</option><option value="SD">South Dakota</option><option value="TN">Tennessee</option><option value="TX">Texas</option><option value="UT">Utah</option><option value="VT">Vermont</option><option value="VA">Virginia</option><option value="WA">Washington</option><option value="WV">West Virginia</option><option value="WI">Wisconsin</option><option value="WY">Wyoming</option></select><span class="error-msg" id="c-shop_state-err"></span></div>
-              <div class="field"><label for="c-locations_count">Number of locations<span class="req">*</span></label>
-                <input class="input" type="number" inputmode="numeric" id="c-locations_count" name="locations_count" min="1" max="999" required><span class="error-msg" id="c-locations_count-err"></span></div>
-              <div class="field"><label for="c-shop_type">Shop type<span class="opt">Optional</span></label>
-                <select id="c-shop_type" name="shop_type">
-                  <option value="">Select…</option>
-                  <option>Independent repair shop</option>
-                  <option>Dealership</option>
-                  <option>Fleet maintenance</option>
-                  <option>Other</option>
-                </select></div>
-              <div class="field"><label for="c-website">Business website<span class="opt">Optional</span></label>
-                <input class="input" type="url" id="c-website" name="website" autocomplete="url" maxlength="200" placeholder="https://"><span class="error-msg" id="c-website-err"></span></div>
+              <div class="field"><label for="c-city">City<span class="req">*</span></label>
+                <input class="input" id="c-city" name="city" autocomplete="address-level2" required maxlength="100"><span class="error-msg" id="c-city-err"></span></div>
+              <div class="field"><label for="c-state">State<span class="req">*</span></label>
+                <select id="c-state" name="state" autocomplete="address-level1" required><option value="">Select a state…</option><option value="AL">Alabama</option><option value="AK">Alaska</option><option value="AZ">Arizona</option><option value="AR">Arkansas</option><option value="CA">California</option><option value="CO">Colorado</option><option value="CT">Connecticut</option><option value="DE">Delaware</option><option value="DC">District of Columbia</option><option value="FL">Florida</option><option value="GA">Georgia</option><option value="HI">Hawaii</option><option value="ID">Idaho</option><option value="IL">Illinois</option><option value="IN">Indiana</option><option value="IA">Iowa</option><option value="KS">Kansas</option><option value="KY">Kentucky</option><option value="LA">Louisiana</option><option value="ME">Maine</option><option value="MD">Maryland</option><option value="MA">Massachusetts</option><option value="MI">Michigan</option><option value="MN">Minnesota</option><option value="MS">Mississippi</option><option value="MO">Missouri</option><option value="MT">Montana</option><option value="NE">Nebraska</option><option value="NV">Nevada</option><option value="NH">New Hampshire</option><option value="NJ">New Jersey</option><option value="NM">New Mexico</option><option value="NY">New York</option><option value="NC">North Carolina</option><option value="ND">North Dakota</option><option value="OH">Ohio</option><option value="OK">Oklahoma</option><option value="OR">Oregon</option><option value="PA">Pennsylvania</option><option value="PR">Puerto Rico</option><option value="RI">Rhode Island</option><option value="SC">South Carolina</option><option value="SD">South Dakota</option><option value="TN">Tennessee</option><option value="TX">Texas</option><option value="UT">Utah</option><option value="VT">Vermont</option><option value="VA">Virginia</option><option value="WA">Washington</option><option value="WV">West Virginia</option><option value="WI">Wisconsin</option><option value="WY">Wyoming</option></select><span class="error-msg" id="c-state-err"></span></div>
             </div>
           </fieldset>
 
-          <fieldset>
-            <legend>The role</legend>
-            <div class="field">
-              <span class="label" id="c-tech_level-label">Technician level required<span class="req">*</span></span>
-              <div class="choices" role="radiogroup" aria-labelledby="c-tech_level-label" aria-required="true" data-group="tech_level">
-                <label class="chip"><input type="radio" name="tech_level" value="Master" required><span>Master</span></label>
-                <label class="chip"><input type="radio" name="tech_level" value="A-Level"><span>A-Level</span></label>
-                <label class="chip"><input type="radio" name="tech_level" value="B-Level"><span>B-Level</span></label>
-                <label class="chip"><input type="radio" name="tech_level" value="Multiple levels"><span>Multiple levels</span></label>
-              </div>
-              <span class="error-msg" id="c-tech_level-err"></span>
-            </div>
-            <div class="grid-2">
-              <div class="field"><label for="c-techs_needed">Number of technicians needed<span class="req">*</span></label>
-                <input class="input" type="number" inputmode="numeric" id="c-techs_needed" name="techs_needed" min="1" max="99" required><span class="error-msg" id="c-techs_needed-err"></span></div>
-              <div class="field"><label for="c-pay_range">Expected compensation or pay range<span class="req">*</span></label>
-                <input class="input" id="c-pay_range" name="pay_range" required maxlength="120" placeholder="e.g. $35–$45/hr flat rate, or $80k–$100k/yr"><span class="error-msg" id="c-pay_range-err"></span></div>
-            </div>
-            <div class="field"><label for="c-position_description">Short description of the position and requirements<span class="req">*</span></label>
-              <textarea id="c-position_description" name="position_description" required maxlength="3000" aria-describedby="c-position_description-hint" placeholder="Makes you service, diagnostic work involved, certifications or tools you expect, schedule, benefits…"></textarea>
-              <span class="hint" id="c-position_description-hint">At least 20 characters. The more specific, the better we can screen.</span>
-              <span class="error-msg" id="c-position_description-err"></span></div>
-            <div class="grid-2">
-              <div class="field"><label for="c-hiring_timeline">Preferred hiring timeline<span class="opt">Optional</span></label>
-                <select id="c-hiring_timeline" name="hiring_timeline">
-                  <option value="">Select…</option>
-                  <option>As soon as possible</option>
-                  <option>Within 30 days</option>
-                  <option>Within 60 days</option>
-                  <option>Within 90 days</option>
-                  <option>Just exploring</option>
-                </select></div>
-              <div class="field">
-                <span class="label" id="c-open_nationwide-label">Open to nationwide recruitment?<span class="opt">Optional</span></span>
-                <div class="choices" role="radiogroup" aria-labelledby="c-open_nationwide-label">
-                  <label class="chip"><input type="radio" name="open_nationwide" value="Yes"><span>Yes</span></label>
-                  <label class="chip"><input type="radio" name="open_nationwide" value="No"><span>No</span></label>
-                  <label class="chip"><input type="radio" name="open_nationwide" value="Maybe"><span>Maybe</span></label>
-                </div>
-              </div>
-            </div>
-            <div class="field">
-              <span class="label" id="c-open_relocation-label">Open to relocation candidates?<span class="opt">Optional</span></span>
-              <div class="choices" role="radiogroup" aria-labelledby="c-open_relocation-label">
-                <label class="chip"><input type="radio" name="open_relocation" value="Yes"><span>Yes</span></label>
-                <label class="chip"><input type="radio" name="open_relocation" value="No"><span>No</span></label>
-                <label class="chip"><input type="radio" name="open_relocation" value="Maybe"><span>Maybe</span></label>
-              </div>
-            </div>
-            <div class="field"><label for="c-additional_info">Additional information<span class="opt">Optional</span></label>
-              <textarea id="c-additional_info" name="additional_info" maxlength="3000"></textarea></div>
-          </fieldset>
-
-          <fieldset>
-            <legend>Consent</legend>
+          <div class="field">
             <label class="consent" for="c-consent_authorized">
               <input type="checkbox" id="c-consent_authorized" name="consent_authorized" value="yes" required>
-              <span>I am authorized to submit this inquiry on behalf of the business named above, and I agree to the <a href="/privacy">Privacy Policy</a>. Mechanic Hub may contact me by email and phone about this inquiry.<span class="req">*</span></span>
+              <span>I agree to the <a href="/privacy">Privacy Policy</a> and to be contacted by Mechanic Hub by phone, text (including automated or AI calls and texts) and email. Not a condition of purchase. Msg &amp; data rates may apply. Reply STOP to opt out.<span class="req">*</span></span>
             </label>
             <span class="error-msg" id="c-consent_authorized-err"></span>
-            <label class="consent" for="c-consent_sms">
-              <input type="checkbox" id="c-consent_sms" name="consent_sms" value="yes">
-              <span><strong>Optional:</strong> I agree to receive calls and text messages from Mechanic Hub about this inquiry at the number above, including calls and texts made using automated technology or an artificial or prerecorded voice. Consent is not a condition of service. Message and data rates may apply. Reply STOP to opt out.</span>
-            </label>
-          </fieldset>
+          </div>
 
           <div class="form-status" role="alert" aria-live="assertive" hidden></div>
           <button class="btn btn--gold btn--block" type="submit">Request My Recruitment Consultation <span class="arrow" aria-hidden="true">→</span></button>
-          <p class="hint">Submitting an inquiry doesn't commit you to anything. The recruitment fee is only due once you sign a service agreement.</p>
+          <p class="hint">No commitment. The fee is only due once you sign a service agreement.</p>
         </form>
       </div>
     </div>
@@ -378,7 +312,7 @@
   <div class="wrap">
     <div class="footer-grid">
       <div class="footer-brand">
-        <img src="/assets/logo-stack.webp" width="480" height="360" alt="Mechanic Hub" loading="lazy">
+        <img src="/assets/logo-footer.webp" width="464" height="341" alt="Mechanic Hub" loading="lazy">
         <p>Specialist recruitment for automotive repair shops and dealerships across the United States. We recruit automotive technicians only.</p>
       </div>
       <div class="footer-col">
@@ -413,8 +347,8 @@
     </div>
   </div>
 </footer>
-<script src="/js/rules.js?v=mvuljm2y" defer></script>
-<script src="/js/main.js?v=mvuljm2y" defer></script>
+<script src="/js/rules.js?v=mvurkg79" defer></script>
+<script src="/js/main.js?v=mvurkg79" defer></script>
 
 </body>
 </html>

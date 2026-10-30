@@ -19,8 +19,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,500..900&family=Barlow:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="/css/styles.css?v=mvuljm2y">
-<link rel="stylesheet" href="/css/theme.css?v=mvuljm2y">
+<link rel="stylesheet" href="/css/styles.css?v=mvurkg79">
+<link rel="stylesheet" href="/css/theme.css?v=mvurkg79">
 
 </head>
 <body>
@@ -72,18 +72,18 @@
     <div class="wrap form-shell">
       <div class="form-aside">
         <span class="spec spec--gold">Technician profile</span>
-        <h2 id="application-title">Tell us what you work on.</h2>
-        <p>About five minutes. A résumé helps but isn't required.</p>
+        <h2 id="application-title">Tell us about yourself.</h2>
+        <p>Takes under a minute. Free, with no commitment.</p>
         <ol class="next-list">
           <li>We review your experience and skills.</li>
           <li>When a role fits, we reach out to talk it through with you.</li>
           <li>If you're interested, we introduce you to the shop for an interview.</li>
         </ol>
-        <p class="hint">We'll never ask for your Social Security number, bank details or driver's license number here. Fields marked <span class="req">*</span> are required.</p>
+        <p class="hint">We'll never ask for your Social Security number, bank details or driver's license number here.</p>
       </div>
 
       <div data-form-wrap>
-        <form class="form" id="tech-form" data-endpoint="/api/technician-application" enctype="multipart/form-data" novalidate>
+        <form class="form" id="tech-form" data-endpoint="/api/technician-application" novalidate>
           <div class="hp-field" aria-hidden="true">
             <label for="t-company_fax">Leave this field empty</label>
             <input type="text" id="t-company_fax" name="company_fax" tabindex="-1" autocomplete="off">
@@ -91,145 +91,47 @@
           <input type="hidden" name="form_started" value="">
 
           <fieldset>
-            <legend>About you</legend>
+            <legend>Your details</legend>
             <div class="grid-2">
-              <div class="field"><label for="t-full_name">Full name<span class="req">*</span></label>
-                <input class="input" id="t-full_name" name="full_name" autocomplete="name" required maxlength="120"><span class="error-msg" id="t-full_name-err"></span></div>
+              <div class="field"><label for="t-first_name">First name<span class="req">*</span></label>
+                <input class="input" id="t-first_name" name="first_name" autocomplete="given-name" required maxlength="60"><span class="error-msg" id="t-first_name-err"></span></div>
+              <div class="field"><label for="t-last_name">Last name<span class="req">*</span></label>
+                <input class="input" id="t-last_name" name="last_name" autocomplete="family-name" required maxlength="60"><span class="error-msg" id="t-last_name-err"></span></div>
               <div class="field"><label for="t-email">Email address<span class="req">*</span></label>
                 <input class="input" type="email" id="t-email" name="email" autocomplete="email" required maxlength="200"><span class="error-msg" id="t-email-err"></span></div>
               <div class="field"><label for="t-phone">Phone number<span class="req">*</span></label>
                 <input class="input" type="tel" id="t-phone" name="phone" autocomplete="tel" required maxlength="30" placeholder="(555) 555-0123" data-validate="phone"><span class="error-msg" id="t-phone-err"></span></div>
-              <div class="field"><label for="t-linkedin">LinkedIn profile<span class="opt">Optional</span></label>
-                <input class="input" type="url" id="t-linkedin" name="linkedin" maxlength="200" placeholder="https://linkedin.com/in/…"><span class="error-msg" id="t-linkedin-err"></span></div>
-              <div class="field"><label for="t-city">Current city<span class="req">*</span></label>
+              <div class="field"><label for="t-city">City<span class="req">*</span></label>
                 <input class="input" id="t-city" name="city" autocomplete="address-level2" required maxlength="100"><span class="error-msg" id="t-city-err"></span></div>
-              <div class="field"><label for="t-state">Current state<span class="req">*</span></label>
-                <select id="t-state" name="state" required><option value="">Select a state…</option><option value="AL">Alabama</option><option value="AK">Alaska</option><option value="AZ">Arizona</option><option value="AR">Arkansas</option><option value="CA">California</option><option value="CO">Colorado</option><option value="CT">Connecticut</option><option value="DE">Delaware</option><option value="DC">District of Columbia</option><option value="FL">Florida</option><option value="GA">Georgia</option><option value="HI">Hawaii</option><option value="ID">Idaho</option><option value="IL">Illinois</option><option value="IN">Indiana</option><option value="IA">Iowa</option><option value="KS">Kansas</option><option value="KY">Kentucky</option><option value="LA">Louisiana</option><option value="ME">Maine</option><option value="MD">Maryland</option><option value="MA">Massachusetts</option><option value="MI">Michigan</option><option value="MN">Minnesota</option><option value="MS">Mississippi</option><option value="MO">Missouri</option><option value="MT">Montana</option><option value="NE">Nebraska</option><option value="NV">Nevada</option><option value="NH">New Hampshire</option><option value="NJ">New Jersey</option><option value="NM">New Mexico</option><option value="NY">New York</option><option value="NC">North Carolina</option><option value="ND">North Dakota</option><option value="OH">Ohio</option><option value="OK">Oklahoma</option><option value="OR">Oregon</option><option value="PA">Pennsylvania</option><option value="PR">Puerto Rico</option><option value="RI">Rhode Island</option><option value="SC">South Carolina</option><option value="SD">South Dakota</option><option value="TN">Tennessee</option><option value="TX">Texas</option><option value="UT">Utah</option><option value="VT">Vermont</option><option value="VA">Virginia</option><option value="WA">Washington</option><option value="WV">West Virginia</option><option value="WI">Wisconsin</option><option value="WY">Wyoming</option></select><span class="error-msg" id="t-state-err"></span></div>
+              <div class="field"><label for="t-state">State<span class="req">*</span></label>
+                <select id="t-state" name="state" autocomplete="address-level1" required><option value="">Select a state…</option><option value="AL">Alabama</option><option value="AK">Alaska</option><option value="AZ">Arizona</option><option value="AR">Arkansas</option><option value="CA">California</option><option value="CO">Colorado</option><option value="CT">Connecticut</option><option value="DE">Delaware</option><option value="DC">District of Columbia</option><option value="FL">Florida</option><option value="GA">Georgia</option><option value="HI">Hawaii</option><option value="ID">Idaho</option><option value="IL">Illinois</option><option value="IN">Indiana</option><option value="IA">Iowa</option><option value="KS">Kansas</option><option value="KY">Kentucky</option><option value="LA">Louisiana</option><option value="ME">Maine</option><option value="MD">Maryland</option><option value="MA">Massachusetts</option><option value="MI">Michigan</option><option value="MN">Minnesota</option><option value="MS">Mississippi</option><option value="MO">Missouri</option><option value="MT">Montana</option><option value="NE">Nebraska</option><option value="NV">Nevada</option><option value="NH">New Hampshire</option><option value="NJ">New Jersey</option><option value="NM">New Mexico</option><option value="NY">New York</option><option value="NC">North Carolina</option><option value="ND">North Dakota</option><option value="OH">Ohio</option><option value="OK">Oklahoma</option><option value="OR">Oregon</option><option value="PA">Pennsylvania</option><option value="PR">Puerto Rico</option><option value="RI">Rhode Island</option><option value="SC">South Carolina</option><option value="SD">South Dakota</option><option value="TN">Tennessee</option><option value="TX">Texas</option><option value="UT">Utah</option><option value="VT">Vermont</option><option value="VA">Virginia</option><option value="WA">Washington</option><option value="WV">West Virginia</option><option value="WI">Wisconsin</option><option value="WY">Wyoming</option></select><span class="error-msg" id="t-state-err"></span></div>
             </div>
           </fieldset>
 
           <fieldset>
-            <legend>Experience</legend>
-            <div class="grid-2">
-              <div class="field"><label for="t-years_experience">Years of automotive experience<span class="req">*</span></label>
-                <input class="input" type="number" inputmode="numeric" id="t-years_experience" name="years_experience" min="0" max="60" required><span class="error-msg" id="t-years_experience-err"></span></div>
-              <div class="field"><label for="t-employment_status">Current employment status<span class="req">*</span></label>
-                <select id="t-employment_status" name="employment_status" required>
-                  <option value="">Select…</option>
-                  <option>Employed full-time</option>
-                  <option>Employed part-time</option>
-                  <option>Self-employed / mobile tech</option>
-                  <option>Not currently employed</option>
-                  <option>Other</option>
-                </select><span class="error-msg" id="t-employment_status-err"></span></div>
-            </div>
+            <legend>Your experience</legend>
             <div class="field">
               <span class="label" id="t-tech_level-label">Technician level<span class="req">*</span></span>
-              <div class="choices" role="radiogroup" aria-labelledby="t-tech_level-label" aria-required="true" data-group="tech_level">
-                <label class="chip"><input type="radio" name="tech_level" value="Master" required><span>Master</span></label>
-                <label class="chip"><input type="radio" name="tech_level" value="A-Level"><span>A-Level</span></label>
-                <label class="chip"><input type="radio" name="tech_level" value="B-Level"><span>B-Level</span></label>
-                <label class="chip"><input type="radio" name="tech_level" value="Other"><span>Other / not sure</span></label>
-              </div>
+              <div class="choices" role="radiogroup" aria-labelledby="t-tech_level-label" aria-required="true"><label class="chip"><input type="radio" name="tech_level" value="Master" required><span>Master</span></label><label class="chip"><input type="radio" name="tech_level" value="A-Level"><span>A-Level</span></label><label class="chip"><input type="radio" name="tech_level" value="B-Level"><span>B-Level</span></label><label class="chip"><input type="radio" name="tech_level" value="Other"><span>Other / not sure</span></label></div>
               <span class="error-msg" id="t-tech_level-err"></span>
             </div>
-            <div class="field">
-              <span class="label" id="t-expertise-label">Primary areas of technical expertise<span class="req">*</span></span>
-              <span class="hint">Select all that apply.</span>
-              <div class="choices" role="group" aria-labelledby="t-expertise-label" data-group="expertise" data-min="1">
-                <label class="chip"><input type="checkbox" name="expertise" value="Engine diagnostics & repair"><span>Engine diag &amp; repair</span></label>
-                <label class="chip"><input type="checkbox" name="expertise" value="Electrical & electronics"><span>Electrical &amp; electronics</span></label>
-                <label class="chip"><input type="checkbox" name="expertise" value="Drivability"><span>Drivability</span></label>
-                <label class="chip"><input type="checkbox" name="expertise" value="Transmission & drivetrain"><span>Transmission &amp; drivetrain</span></label>
-                <label class="chip"><input type="checkbox" name="expertise" value="Brakes, steering & suspension"><span>Brakes, steering &amp; suspension</span></label>
-                <label class="chip"><input type="checkbox" name="expertise" value="HVAC"><span>HVAC</span></label>
-                <label class="chip"><input type="checkbox" name="expertise" value="Hybrid & EV"><span>Hybrid &amp; EV</span></label>
-                <label class="chip"><input type="checkbox" name="expertise" value="Diesel"><span>Diesel</span></label>
-                <label class="chip"><input type="checkbox" name="expertise" value="ADAS calibration"><span>ADAS calibration</span></label>
-                <label class="chip"><input type="checkbox" name="expertise" value="Maintenance & light repair"><span>Maintenance &amp; light repair</span></label>
-                <label class="chip"><input type="checkbox" name="expertise" value="Other"><span>Other</span></label>
-              </div>
-              <span class="error-msg" id="t-expertise-err"></span>
-            </div>
-            <div class="field"><label for="t-experience_summary">Brief description of your automotive experience<span class="req">*</span></label>
-              <textarea id="t-experience_summary" name="experience_summary" required maxlength="3000" aria-describedby="t-experience_summary-hint" placeholder="Shops you've worked at, the kind of work you handle, what you're best at…"></textarea>
-              <span class="hint" id="t-experience_summary-hint">At least 20 characters.</span>
-              <span class="error-msg" id="t-experience_summary-err"></span></div>
-          </fieldset>
-
-          <fieldset>
-            <legend>Skills, tools &amp; certifications <span class="opt">Optional</span></legend>
             <div class="grid-2">
-              <div class="field"><label for="t-certifications">ASE or other certifications</label>
-                <input class="input" id="t-certifications" name="certifications" maxlength="300" placeholder="e.g. ASE A1–A8, L1, OEM training"></div>
-              <div class="field"><label for="t-makes_models">Makes and models you've worked on</label>
-                <input class="input" id="t-makes_models" name="makes_models" maxlength="300" placeholder="e.g. GM, Ford, Toyota, European"></div>
-              <div class="field"><label for="t-diagnostic_equipment">Diagnostic equipment experience</label>
-                <input class="input" id="t-diagnostic_equipment" name="diagnostic_equipment" maxlength="300" placeholder="e.g. Snap-on, Autel, OEM scan tools, scopes"></div>
-              <div class="field"><label for="t-tool_value">Approximate value of tools you own</label>
-                <select id="t-tool_value" name="tool_value">
-                  <option value="">Select…</option>
-                  <option>Under $5,000</option>
-                  <option>$5,000–$15,000</option>
-                  <option>$15,000–$30,000</option>
-                  <option>$30,000–$50,000</option>
-                  <option>Over $50,000</option>
-                </select></div>
+              <div class="field"><label for="t-years_experience">Years of experience<span class="req">*</span></label>
+                <input class="input" type="number" inputmode="numeric" id="t-years_experience" name="years_experience" min="0" max="60" required><span class="error-msg" id="t-years_experience-err"></span></div>
+              <div class="field"><label for="t-tool_value">Total invested in tools<span class="req">*</span></label>
+                <select id="t-tool_value" name="tool_value" required><option value="">Select…</option><option>Under $5,000</option><option>$5,000–$15,000</option><option>$15,000–$30,000</option><option>$30,000–$50,000</option><option>Over $50,000</option></select><span class="error-msg" id="t-tool_value-err"></span></div>
             </div>
-            <div class="field">
-              <span class="label" id="t-bumper_to_bumper-label">Bumper-to-bumper repair capability?</span>
-              <div class="choices" role="radiogroup" aria-labelledby="t-bumper_to_bumper-label">
-                <label class="chip"><input type="radio" name="bumper_to_bumper" value="Yes"><span>Yes</span></label>
-                <label class="chip"><input type="radio" name="bumper_to_bumper" value="Partially"><span>Partially</span></label>
-                <label class="chip"><input type="radio" name="bumper_to_bumper" value="No"><span>No</span></label>
-              </div>
-            </div>
-            <div class="field">
-              <label for="t-resume">Résumé</label>
-              <div class="file-drop">
-                <input type="file" id="t-resume" name="resume" accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" aria-describedby="t-resume-hint">
-                <span class="hint" id="t-resume-hint">PDF, DOC or DOCX, up to 5 MB.</span>
-              </div>
-              <span class="error-msg" id="t-resume-err"></span>
-            </div>
+            <div class="field"><label for="t-certifications">Active certifications<span class="opt">Optional</span></label>
+              <input class="input" id="t-certifications" name="certifications" maxlength="300" placeholder="e.g. ASE A1–A8, L1, EPA 609, OEM"><span class="error-msg" id="t-certifications-err"></span></div>
           </fieldset>
 
-          <fieldset>
-            <legend>What you're looking for <span class="opt">Optional</span></legend>
-            <div class="grid-2">
-              <div class="field"><label for="t-preferred_locations">Preferred job location(s)</label>
-                <input class="input" id="t-preferred_locations" name="preferred_locations" maxlength="300" placeholder="City, state or region"></div>
-              <div class="field"><label for="t-min_compensation">Minimum desired compensation</label>
-                <input class="input" id="t-min_compensation" name="min_compensation" maxlength="120" placeholder="e.g. $40/hr flat rate or $90k/yr"></div>
-              <div class="field">
-                <span class="label" id="t-willing_relocate-label">Willing to relocate within the U.S.?</span>
-                <div class="choices" role="radiogroup" aria-labelledby="t-willing_relocate-label">
-                  <label class="chip"><input type="radio" name="willing_relocate" value="Yes"><span>Yes</span></label>
-                  <label class="chip"><input type="radio" name="willing_relocate" value="Maybe"><span>Maybe</span></label>
-                  <label class="chip"><input type="radio" name="willing_relocate" value="No"><span>No</span></label>
-                </div>
-              </div>
-              <div class="field"><label for="t-start_date">Earliest available start date</label>
-                <input class="input" type="date" id="t-start_date" name="start_date"><span class="error-msg" id="t-start_date-err"></span></div>
-            </div>
-            <div class="field"><label for="t-relocation_notes">Relocation preferences or restrictions</label>
-              <textarea id="t-relocation_notes" name="relocation_notes" maxlength="1500" placeholder="Family, housing, states you would or wouldn't consider…"></textarea></div>
-            <div class="field"><label for="t-additional_info">Additional information</label>
-              <textarea id="t-additional_info" name="additional_info" maxlength="3000"></textarea></div>
-          </fieldset>
-
-          <fieldset>
-            <legend>Consent</legend>
+          <div class="field">
             <label class="consent" for="t-consent_privacy">
               <input type="checkbox" id="t-consent_privacy" name="consent_privacy" value="yes" required>
-              <span>I agree that Mechanic Hub may store and process my information to consider me for automotive technician roles, as described in the <a href="/privacy">Privacy Policy</a>, and may contact me by email and phone about opportunities. I understand my profile won't be shared with an employer without first discussing the specific opportunity with me.<span class="req">*</span></span>
+              <span>I agree to the <a href="/privacy">Privacy Policy</a> and to be contacted by Mechanic Hub about job opportunities by phone, text (including automated or AI calls and texts) and email. Not a condition of applying. Msg &amp; data rates may apply. Reply STOP to opt out.<span class="req">*</span></span>
             </label>
             <span class="error-msg" id="t-consent_privacy-err"></span>
-            <label class="consent" for="t-consent_sms">
-              <input type="checkbox" id="t-consent_sms" name="consent_sms" value="yes">
-              <span><strong>Optional:</strong> I agree to receive calls and text messages from Mechanic Hub about job opportunities at the number above, including calls and texts made using automated technology or an artificial or prerecorded voice. Consent is not a condition of applying. Message and data rates may apply. Reply STOP to opt out.</span>
-            </label>
-          </fieldset>
+          </div>
 
           <div class="form-status" role="alert" aria-live="assertive" hidden></div>
           <button class="btn btn--gold btn--block" type="submit">Submit My Technician Profile <span class="arrow" aria-hidden="true">→</span></button>
@@ -243,7 +145,7 @@
   <div class="wrap">
     <div class="footer-grid">
       <div class="footer-brand">
-        <img src="/assets/logo-stack.webp" width="480" height="360" alt="Mechanic Hub" loading="lazy">
+        <img src="/assets/logo-footer.webp" width="464" height="341" alt="Mechanic Hub" loading="lazy">
         <p>Specialist recruitment for automotive repair shops and dealerships across the United States. We recruit automotive technicians only.</p>
       </div>
       <div class="footer-col">
@@ -278,8 +180,8 @@
     </div>
   </div>
 </footer>
-<script src="/js/rules.js?v=mvuljm2y" defer></script>
-<script src="/js/main.js?v=mvuljm2y" defer></script>
+<script src="/js/rules.js?v=mvurkg79" defer></script>
+<script src="/js/main.js?v=mvurkg79" defer></script>
 
 </body>
 </html>

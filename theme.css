@@ -91,3 +91,20 @@ body::before { background: var(--header-bg); }
 .input:focus, .form select:focus, .form textarea:focus { box-shadow: 0 0 0 3px var(--focus-ring); }
 .form-success .tick { background: var(--btn-fill); color: #fff; }
 .placeholder, .legal-note { border-color: rgba(29, 78, 216, 0.5); }
+
+/* Single consent box on the hire form reads as fine print, not a bold label */
+.field > label.consent { font-weight: 400; font-size: 0.88rem; color: var(--muted); line-height: 1.5; }
+
+/* Pricing ledger: body font for values; on phones each row stacks label over value */
+.ledger dd { font-family: var(--font-body); font-size: 0.95rem; font-weight: 600; }
+.ledger dd.g { color: var(--gold); }
+@media (max-width: 560px) {
+  .ledger div { grid-template-columns: minmax(0, 1fr); gap: 2px; padding: 12px 16px; }
+  .ledger dt { font-size: 0.85rem; color: var(--muted); }
+  .ledger dd { text-align: left; font-size: 1rem; }
+}
+
+/* Footer logo: tightly cropped; centered on phones, text stays left-aligned */
+.footer-brand img { width: 100%; max-width: 300px; height: auto; margin: 0; }
+@media (max-width: 560px) { .footer-brand img { max-width: 280px; margin-inline: auto; } }
+
