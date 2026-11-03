@@ -108,3 +108,7 @@ body::before { background: var(--header-bg); }
 .footer-brand img { width: 100%; max-width: 300px; height: auto; margin: 0; }
 @media (max-width: 560px) { .footer-brand img { max-width: 280px; margin-inline: auto; } }
 
+
+/* GoHighLevel form embeds */
+.ghl-embed { min-width: 0; background: var(--steel); border: 1px solid var(--rule-strong); border-radius: var(--radius); padding: clamp(8px, 2vw, 16px); }
+.ghl-embed iframe { display: block; width: 100%; }
